@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  color: red;
+}
+
+header {
+  /* background-color: lightblue; */
+  margin: 0 auto;
+  background-color: #270082;
+  border-color: 2px solid red;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  color: black;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  color: white;
+}
+.small-li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  color: white;
+}
+nav ul a {
+  color: white;
+  text-decoration: none;
+  display: grid;
+  /* color: black; */
+}
+nav ul a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: rgb(222, 79, 35);
+  transition: width 0.3s ease;
+}
+nav ul a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  font-size: 30px;
+  color: white;
+}
+main {
+  /* background-color: lightcoral; */
+  /* min-height: 100vh; */
+}
+.hero-section {
+  background-image: url(../../../../practice/channels/dosomecode/project6/images/hero_image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  border: 2px solid red;
+}
+.hero-section {
+  display: grid;
+  place-content: center;
+  color: white;
+  text-align: center;
+}
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-section .container h1 {
+  font-size: 90px;
+}
+.hero-section .container h3 {
+  font-size: 30px;
+}
+.music-section {
+  background-color: lightcoral;
+  padding-top: 80px;
+}
+.music-section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.music-btn {
+  background-color: blueviolet;
+  padding: 10px 8px;
+  border-style: none;
+  border-radius: 3px;
+  color: white;
+}
+.music-section-imag {
+  border: 2px solid #008000;
+  position: relative;
+  top: 420px;
+  z-index: 1;
+  margin-top: -420px;
+}
+.about-music-section {
+  background-color: lightblue;
+}
+.about-music-section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 500px;
+}
+.read-more-btn {
+  padding: 10px 15px;
+  background-color: blue;
+  color: white;
+  border-style: none;
+  border-radius: 5px;
+}
+.world-enter-section {
+  background-image: url(../../../../practice/channels/dosomecode/project6/images/video.png);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.world-enter-section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.gift-card-section {
+  background-color: #008000;
+}
+.gift-card-section .container {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  align-items: center;
+}
+
+.gift-card-section .gift-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+  text-align: justify;
+}
+
+.shop-learn ul p {
+  font-size: 16px;
+}
+.shop-learn ul li {
+  font-size: 14px;
+  /* list-style: none; */
+}
+.links .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container ul li {
+  list-style: none;
+  /* font-size: 26px; */
+}
+
+footer {
+  background-color: blue;
+}
+footer p {
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+/* @media screen and (min-width: 600px) {
+  body {
+    color: red;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  /* .nav-media {
+    display: grid;
+  } */
+  header nav ul .small-li {
+    display: none;
+  }
+  header .container {
+    padding: 5px 0;
+    max-height: 10vh;
+  }
+  header nav .logo {
+    font-size: 38px;
+    color: white;
+    padding-left: 30px;
+  }
+  header nav .small-ul::before {
+    content: '';
+    display: inline-block;
+    height: 113px;
+    width: 109px;
+    background-size: 56px 121px;
+    background-repeat: no-repeat;
+    background-image: url(white-bars.svg);
+    /* background-image:url(<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" fill="#ffffff"></path> </g></svg>)
+    background-repeat: no-repeat; */
+    /*fill: '#ffffff';
+    /* content: '\2630'; */
+    /* content: './images/bars.svg'; */
+    /* content: url('bars.svg'); */
+    /* padding: 20px 20px; */
+    /* width: 20px;
+    height: 20px;
+    background-color: rgb(222, 79, 35);
+    display: block;
+    position: relative;
+    z-index: 3; */
+  }
+  .gift-card-section .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .for-mobile {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .music-section-imag.for-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    margin-top: -400px;
+    max-width: 749px;
+  }
+  .music-section-imag.for-mobile img {
+    max-width: 749px;
+  }
+
+  /* nav .small--screen::after {
+    /* add hamburger icons* here how to do it
+     header nav .small-screen::after {
+     /* Unicode character for hamburger icon */
+  /* content: '\2630';
+  /* content: 'Hello'; */
+  /* display: inline-block; */
+  /* font-size: 20px; Adjust the size as needed */
+  /* margin-left: 10px; Add spacing between the text and icon */
+  /* color: white;
+  position: relative;
+  z-index: 2;
+  height: 10px;
+  width: 10px;
+  padding: 20px 20px; */
+  /* border-color: green */
+}

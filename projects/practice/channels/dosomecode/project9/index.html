@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7a4b62b0a4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="logo">Great Zone</div>
+        <!-- <div class="navigate"> -->
+        <ul class="navigate">
+          <a href="#home">
+            <li>Home</li>
+          </a>
+          <a href="#post">
+            <li>Posts</li>
+          </a>
+          <li>
+            <i class="fa fa-instagram"></i>
+          </li>
+          <li>
+            <i class="fa fa-twitter"></i>
+          </li>
+          <li>
+            <i class="fab fa-linkedin"></i>
+          </li>
+        </ul>
+        <!-- </div> -->
+      </nav>
+    </header>
+    <main>
+      <section class="hero-zone container">
+        <div class="hero-info">
+          <h1>Make Zone Better!</h1>
+          <h3>Why Better Xone important?</h3>
+        </div>
+        <div>
+          <img class="hero-img" src="./images/hero.png" alt="" />
+        </div>
+      </section>
+      <section class="container establised-section">
+        <div class="establised-section-info">
+          <h1>Long Establised</h1>
+          <p>
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that....
+          </p>
+          <div class="date-more">
+            <p id="myId"></p>
+            <p>More...</p>
+          </div>
+        </div>
+        <div class="long-card">
+          <img src="./images/long-card.png" alt="" />
+        </div>
+      </section>
+      <section class="cards-section container cards-section-grid">
+        <figure>
+          <img src="./images/card1.png" alt="" />
+          <div class="card-info">
+            <h2>Long Establish</h2>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that....
+            </p>
+            <div class="date-more">
+              <p id="myId"></p>
+              <p>More...</p>
+            </div>
+          </div>
+        </figure>
+        <figure>
+          <img src="./images/card1.png" alt="" />
+          <div class="card-info">
+            <h2>Long Establish</h2>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that....
+            </p>
+            <div class="date-more">
+              <p id="myId"></p>
+              <p>More...</p>
+            </div>
+          </div>
+        </figure>
+        <figure>
+          <img src="./images/card1.png" alt="" />
+          <div class="card-info">
+            <h2>Long Establish</h2>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that....
+            </p>
+            <div class="date-more">
+              <p id="myId"></p>
+              <p>More...</p>
+            </div>
+          </div>
+        </figure>
+      </section>
+      <section class="container establised-section myshadow">
+        <div class="establised-section-info">
+          <h1>What is Lorem Ipsum?</h1>
+          <p>
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that....
+          </p>
+          <div class="date-more">
+            <p id="myId"></p>
+            <p>More...</p>
+          </div>
+        </div>
+        <div>
+          <img src="./images/long-big-card.png" alt="" />
+        </div>
+      </section>
+      <footer>
+        <div class="container myfooter">
+          <p>GreatZone 2022 copyright all rights reserved</p>
+          <ul class="navigate">
+            <li>
+              <i class="fa fa-instagram"></i>
+            </li>
+            <li>
+              <i class="fa fa-twitter"></i>
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // your current script codecode...
+        const currentDate = new Date();
+        const months = [
+          'Jan',
+          'Feb',
+          'Mar',
+          'Apr',
+          'May',
+          'Jun',
+          'Jul',
+          'Aug',
+          'Sep',
+          'Oct',
+          'Nov',
+          'Dec',
+        ];
+        const monthName = months[currentDate.getMonth()]; // Get month name
+        const day = currentDate.getDate(); // Get day
+        const year = currentDate.getFullYear(); // Get year
+
+        const formattedDate = `${monthName} ${day} ${year}`;
+        console.log(formattedDate);
+        // let dateFormat1 = moment().format('D-MM-YYYY');
+        // var date = new Date();
+        // let day = date.getDate();
+        // console.log(day); // 23
+        // let month = date.getMonth();
+        // // console.log(month.toLocaleString() + 1); // 8
+        // console.log(month + 1);
+        // let year = date.getFullYear();
+        // console.log(year); // 2022
+        var p = document.getElementById('myId');
+        p.innerHTML = formattedDate;
+      });
+    </script>
+  </body>
+</html>

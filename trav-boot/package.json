@@ -1,0 +1,13 @@
+{
+  "name": "test-proj",
+  "version": "1.0.0",
+  "description": "test-desc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "hello how are you dev",
+    "prod": "test prod"
+  },
+  "author": "",
+  "license": "ISC"
+}

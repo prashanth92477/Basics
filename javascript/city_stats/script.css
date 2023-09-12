@@ -1,0 +1,93 @@
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+input {
+  padding: 10px 0;
+  width: 200px;
+  border-radius: 5px;
+  /* border-style: none; */
+}
+::placeholder {
+  padding-left: 10px;
+  font-size: 16px;
+}
+input:not(.btn):focus {
+  outline: none;
+  border-left: 7px solid lightcoral;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: lightblue;
+}
+
+a.register {
+  padding: 10px 19px;
+  background-color: lightcoral;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  margin-left: 8px;
+  transition: background-color 220ms, transform 220ms;
+}
+a.register:hover {
+  transform: translate(0.8px, 0.8px);
+}
+main.container {
+  height: 75vh;
+  background-color: aquamarine;
+}
+.about_us {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+footer {
+  padding: 30px 0;
+  background-color: lightgoldenrodyellow;
+}
+footer a {
+  text-decoration: none;
+}
+.links {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.output {
+  padding: 15px 0;
+  background-color: lightseagreen;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+.output {
+  padding: 15px 0;
+  background-color: lightseagreen;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 50%;
+  margin: 20%auto;
+  padding: 50px 50px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 5px;
+}
+select {
+  width: 100px;
+  padding-left: 20px;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+#voters {
+  margin-right: 8px;
+}

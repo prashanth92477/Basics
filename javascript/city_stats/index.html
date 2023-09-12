@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scripts</title>
+    <link rel="stylesheet" href="./script.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="nav-brand">City stats</h1>
+      <div class="us">
+        <a href="#" class="about_us">About us</a>
+        <a href="#" class="register">Register</a>
+      </div>
+    </nav>
+    <main class="container">
+      <!-- <form> -->
+      <select name="country" id="country">
+        <option value="">Select City</option>
+        <option value="Berlin">Berlin</option>
+        <option value="Amsterdam">Amsterdam</option>
+      </select>
+      <!-- </form> -->
+      <p id="output" class="output">
+        <span id="voters"></span> citizens can vote in <span id="cntry"></span>
+      </p>
+    </main>
+
+    <footer>
+      <div class="links">
+        <a href="#">About us </a>
+        <a href="#">Contact us</a>
+      </div>
+    </footer>
+
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./city.js"></script>
+  </body>
+</html>

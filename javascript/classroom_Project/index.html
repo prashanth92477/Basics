@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scripts</title>
+    <link rel="stylesheet" href="./script.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="nav-brand">Text eliipise</h1>
+    </nav>
+    <main class="container">
+      <div class="user-input">
+        <label class="label" for="component-name"> Enter text </label>
+        <input
+          type="text"
+          class="input"
+          placeholder="Grade (0 and 20 )"
+          id="input"
+          autocomplete="off"
+        />
+        <button id="add" class="btn-primary">Add</button>
+      </div>
+
+      <table>
+        <tr>
+          <th>Number of tests taken</th>
+          <th>Sum of grades</th>
+          <th>Average grade</th>
+        </tr>
+        <tr>
+          <td id="number"></td>
+          <td id="sum"></td>
+          <td id="average"></td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>Passing grades</th>
+          <th>Failing grades</th>
+          <th>Raised grades</th>
+        </tr>
+        <tr>
+          <td id="Passing"></td>
+          <td id="Failing"></td>
+          <td id="Raised"></td>
+        </tr>
+      </table>
+    </main>
+
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./classroom.js"></script>
+  </body>
+</html>

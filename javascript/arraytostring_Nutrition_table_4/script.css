@@ -1,0 +1,49 @@
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+input {
+  padding: 10px 0;
+  width: 200px;
+  border-radius: 5px;
+  /* border-style: none; */
+}
+::placeholder {
+  padding-left: 10px;
+  font-size: 16px;
+}
+input:not(.btn):focus {
+  outline: none;
+  border-left: 7px solid lightcoral;
+}
+/* .select_options {
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-size: 15px;
+} */
+.container {
+  width: 784px;
+  border: 2px solid blue;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+thead {
+  background-color: lightblue;
+}
+tr td {
+  padding: 8px 0;
+}
+tr th {
+  padding: 8px 0;
+}
+
+tr:nth-child(even) {
+  background-color: #e7a0a0;
+}

@@ -1,0 +1,24 @@
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+input {
+  padding: 10px 0;
+  width: 200px;
+  border-radius: 5px;
+  /* border-style: none; */
+}
+::placeholder {
+  padding-left: 10px;
+  font-size: 16px;
+}
+input:not(.btn):focus {
+  outline: none;
+  border-left: 7px solid lightcoral;
+}
+.select_options {
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-size: 15px;
+}

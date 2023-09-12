@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optional Chaning</title>
+  </head>
+  <style>
+    .container {
+      width: 600px;
+      border: 2px solid blue;
+      border-radius: 5px;
+      margin: 20px auto;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Get full name</h1>
+      <p>
+        Complete the function getFullName such that it returns the name from the
+        user object when it exists. Otherwise, it should return undefined.
+      </p>
+      <p>
+        Take a look at the sample usage to understand the structure of the
+        object that this function expects
+      </p>
+      <p>
+        <strong>This is Optional chaning on the Object property !!!</strong>
+      </p>
+      <div id="output"></div>
+    </div>
+    <div class="container --two">
+      <h1>Refactoring property access</h1>
+      <p>Re-write the getPaymentValue function without using if conditions.</p>
+      <p>
+        Note that the tests would still fail if you comment-out an if condition
+      </p>
+      <p>
+        <strong>This is Optional chaning on the Object property !!!</strong>
+      </p>
+      <div id="refactoring"></div>
+    </div>
+
+    <div class="container --three">
+      <h1>Refactoring grades</h1>
+      <p>Re-write the getFirstGrade function without using if conditions.</p>
+
+      <p>
+        <strong
+          >This is Optional chaning Advance with lOGICAL OPERATORS USING ON
+          ARRAYS FUNCTIONS!!!</strong
+        >
+      </p>
+      <div id="adv_chaning_logical"></div>
+    </div>
+
+    <div class="container --four">
+      <h1>User age</h1>
+      <p>
+        Complete the function getAge such that it returns the age property from
+        the user object it receives.
+      </p>
+      <p>When the age is not defined, default to the string "unknown".</p>
+      <p>
+        <strong
+          >Nullish Collasing, nullish means NULL OR UNDEFINED IS CALLED
+          NULLISH</strong
+        >
+      </p>
+      <div><strong>Ouput:</strong><strong id="nullish_collasing"></strong></div>
+    </div>
+
+    <div class="container --five">
+      <h1>Refactor message</h1>
+      <p>
+        Refactor the getWelcomeMessage function without using an if condition.
+        The functionality should stay the same.
+      </p>
+      <p>The functionality should stay the same.</p>
+      <p>
+        <strong
+          >Nullish Collasing, nullish means NULL OR UNDEFINED IS CALLED NULLISH
+          , Here we are refactoring the if else condition</strong
+        >
+      </p>
+      <div>
+        <strong>Ouput:</strong><strong id="refactoring_if_condition"></strong>
+      </div>
+    </div>
+    <script>
+      /**
+       * @param {object} user
+       * @param {object} [user.info]
+       * @param {last} [user.info.name]
+       */
+      const output = document.querySelector('#output');
+      const refactoring = document.querySelector('#refactoring');
+      const chaning_logical = document.querySelector('#adv_chaning_logical');
+      const nullish_collasing = document.querySelector('#nullish_collasing');
+      const refactoring_if_condition = document.querySelector(
+        '#refactoring_if_condition'
+      );
+
+      const getFullName = (user) => {
+        console.log('info', user);
+        return user.info?.name + '--';
+      };
+      /**
+       * @param {object} user
+       * @param {object} [user.payment]
+       * @param {object} [user.payment.details]
+       * @param {number} [user.payment.details.value]
+       */
+      const getPaymentValue = (user) => {
+        console.log(user);
+        console.log(user.payment?.details);
+        return user.payment?.details.value + '--';
+        // if (
+        //   user.payment &&
+        //   user.payment.details &&
+        //   user.payment.details.value
+        // ) {
+        //   return user.payment.details.value;
+        // }
+        // return undefined;
+      };
+
+      /**
+       * @param {object} data
+       * @param {object} [data.results]
+       * @param {number[]} [data.results.grades]
+       */
+      const getFirstGrade = (data) => {
+        console.log('getFirstGrade --', data);
+        return data.results?.grades?.[0] + '-';
+        // if (data.results && data.results.grades) {
+        //     return data.results.grades[0];
+        // }
+        // return undefined;
+      };
+
+      /**  Nullish COllacsing.
+       * @param {object} user
+       * @param {number} [user.age]
+       */
+      const getAge = (user) => {
+        //console.log(user?.age??"unknown")
+        //return user?.age??"unknown";
+        return user.age ?? ', unknown';
+      };
+
+      /**  Refactoring the if condition to Nullish collacling.
+       * @param {object} user
+       * @param {string} [user.fullName]
+       */
+      const getWelcomeMessage = (user) => {
+        //console.log(user.fullName??"Welcome user")
+        //return user.fullName ?? `, Welcome ${user.fullName}`;
+        return `, Welcome ${user.fullName ?? 'username'}`;
+        // if (user.fullName) {
+        //     return `Welcome ${user.fullName}`;
+        // } else {
+        //     return `Welcome user`;
+        // }
+      };
+
+      output.textContent += getFullName({ info: { name: 'Sam' } }); // "Sam"
+      output.textContent += getFullName({ info: null }); // undefined
+      output.textContent += getFullName({}); // undefined
+
+      refactoring.textContent += getPaymentValue({ id: 1, name: 'Alex' }); //undefined
+      refactoring.textContent += getPaymentValue({
+        id: 2,
+        name: 'Sam',
+        payment: { details: { value: 59 } },
+      }); // 59
+
+      //calling getFirstGrade function below
+      // getFirstGrade({ results: { grades: [18, 14, 19] } }); // 18;
+      // getFirstGrade({ results: {} }); // undefined;
+      // getFirstGrade({}); // undefined;
+
+      chaning_logical.textContent += getFirstGrade({
+        results: { grades: [18, 14, 19] },
+      });
+      chaning_logical.textContent += getFirstGrade({ results: {} });
+      chaning_logical.textContent += getFirstGrade({});
+
+      // Nullish COllaceing
+
+      nullish_collasing.textContent += getAge({ age: 19 }); // 19
+      nullish_collasing.textContent += getAge({}); //
+
+      // calling the method  refactoring the Nullish collacesing
+
+      refactoring_if_condition.textContent += getWelcomeMessage({
+        fullName: 'Sam Green',
+      }); // "Welcome Sam Green"
+
+      refactoring_if_condition.textContent += getWelcomeMessage({}); // "Welcome user"
+    </script>
+  </body>
+</html>

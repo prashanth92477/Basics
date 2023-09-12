@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nullish Colasecing Advance</title>
+  </head>
+  <style>
+    .container {
+      width: 600px;
+      border: 2px solid blue;
+      border-radius: 5px;
+      margin: 20px auto;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Get full name</h1>
+      <p>
+        Complete the function getFullName such that it returns the name from the
+        user object when it exists. Otherwise, it should return "N/A".
+      </p>
+      <p>
+        Take a look at the sample usage to understand the structure of the
+        object that this function expects.
+      </p>
+      <p><strong>Nullish Collacesing advance</strong></p>
+      <p>Output: <strong id="output"></strong></p>
+    </div>
+    <div class="container --one">
+      <h1>Refactoring property access</h1>
+      <p>Re-write the getPaymentValue function without using if conditions.</p>
+      <p>
+        Note that the tests would still fail if you comment-out an if condition
+      </p>
+      <p><strong>Refactoring the if condition to Nullish Colacesing</strong></p>
+      <p>Output: <strong id="refactoring"></strong></p>
+    </div>
+
+    <div class="container --three">
+      <h1>Get lower full name</h1>
+      <p>
+        Complete the function getFullName such that it returns the full name in
+        lower case from the user object when it exists. Otherwise, it should
+        return "user".
+      </p>
+
+      <p><strong>Refactoring the if condition to Nullish Colacesing</strong></p>
+      <p>Output: <strong id="get_lower"></strong></p>
+    </div>
+    <script>
+      const output = document.querySelector('#output');
+      const refactoring = document.querySelector('#refactoring');
+      const getlower = document.querySelector('#get_lower');
+      /**
+       * @param {object} user
+       * @param {object} [user.info]
+       * @param {last} [user.info.name]
+       */
+      const getFullName = (user) => {
+        //console.log(user.info);
+        return user.info?.name ?? ' N/A';
+      };
+
+      /**
+       * @param {object} user
+       * @param {object} [user.payment]
+       * @param {object} [user.payment.details]
+       * @param {number} [user.payment.details.value]
+       */
+      const getPaymentValue = (user) => {
+        return user.payment?.details?.value ?? 0;
+        // if (
+        //   user.payment &&
+        //   user.payment.details &&
+        //   user.payment.details.value
+        // ) {
+        //   return user.payment.details.value;
+        // }
+        // return 0;
+      };
+      /**
+       * @param {object} user
+       * @param {object} [user.info]
+       * @param {last} [user.info.name]
+       */
+      const getFullName_user = (user) => {
+        //console.log(user.info?.name);
+        return user.info?.name.toLowerCase() ?? '- user';
+      };
+
+      // Sample usage - do not modify
+      // console.log(getFullName({ info: { name: 'Sam' } })); // "Sam"
+      // console.log(getFullName({ info: null })); // "N/A"
+      // console.log(getFullName({})); // "N/A"
+      output.textContent += getFullName({ info: { name: 'Sam' } }); // Sam
+      output.textContent += getFullName({ info: {} }); // N/A
+      output.textContent += getFullName({}); // {}
+
+      // Refacotring the if condition to optional channing and nulish colacecing.
+      // Sample usage - do not modify
+
+      // console.log(getPaymentValue({ id: 1, name: 'Alex' })); // 0
+      // console.log(
+      //   getPaymentValue({
+      //     id: 2,
+      //     name: 'Sam',
+      //     payment: { details: { value: 59 } },
+      //   })
+      // ); // 59
+      refactoring.textContent += getPaymentValue({ id: 1, name: 'Alex' });
+      refactoring.textContent += getPaymentValue({
+        id: 2,
+        name: 'Sam',
+        payment: { details: { value: 59 } },
+      });
+
+      // get lower full name
+      // Sample usage - do not modify
+      // console.log(getFullName_user({ info: { name: 'ALEX' } })); // "alex"
+      // console.log(getFullName_user({ info: null })); // "user"
+      // console.log(getFullName_user({})); // "user"
+      getlower.textContent += getFullName_user({ info: { name: 'ALEX' } });
+      getlower.textContent += getFullName_user({ info: null });
+      getlower.textContent += getFullName_user({});
+    </script>
+  </body>
+</html>

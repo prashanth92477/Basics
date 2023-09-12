@@ -1,0 +1,22 @@
+.container {
+  width: 400px;
+  border: 2px solid blue;
+  border-radius: 5px;
+  margin: 20px auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+select {
+  padding: 10px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+label {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.output {
+  padding-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}

@@ -8,4 +8,6 @@
 
 # javascript from
 
-# jonas, own javascript, traversy meida, wierd javascript colt steel
+# jonas, own javascript, traversy meida, wierd javascript colt steel, supersimpleDev.
+
+# Test one

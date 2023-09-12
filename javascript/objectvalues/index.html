@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object values</title>
+    <style>
+      .contaier {
+        width: 600px;
+        border: 2px solid blue;
+        border-radius: 5px;
+        margin: 20px auto;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contaier">
+      <h1>Upper cased values</h1>
+      <p>
+        Complete the function getUpperCasedValues such that it returns an array
+        containing every property value in the course parameter it receives.
+        Every property value should be in upper case. Check the sample usage to
+        see the expected output.
+      </p>
+      <div id="output"></div>
+    </div>
+
+    <div class="contaier">
+      <h1>Visualize entries</h1>
+      <p>
+        This is a visualization challenge meaning that the goal of it is for you
+        to visualize how a method works.
+      </p>
+      <p>
+        Complete the function visualizeEntries such that it returns the entries
+        from the course object it receives as a parameter. Then look at the
+        result in the console and spend some time understanding how the object
+        gets converted into an array of arrays.
+      </p>
+      <div id="output-two"></div>
+    </div>
+    <script>
+      const output = document.getElementById('output');
+      const output_two = document.getElementById('output-two');
+      const getUpperCasedValues = (course) => {
+        return Object.values(course).map((value) => value.toUpperCase());
+        //          .join(' ');
+      };
+      const visualizeEntries = (entries) => {
+        return Object.entries(entries);
+      };
+
+      // calling  getUpperCasedValues with multiple scenarion parameters
+      output.textContent += getUpperCasedValues({ name: 'Learn JavaScript' }); // ["LEARN JAVASCRIPT"]
+      output.textContent += getUpperCasedValues({
+        name: 'Learn JavaScript',
+        category: 'Programming',
+      }); // ["LEARN JAVASCRIPT", "PROGRAMMING"]
+      output.innerHTML += getUpperCasedValues({}); // []
+
+      // callling visualizeEnteriew the multipe functions and arguments
+      // console.log(
+      //   visualizeEntries({ id: 1, name: 'Learn JavaScript', year: 2021 })
+      // );
+      // console.log(
+      //   visualizeEntries({ name: 'Learn JavaScript', category: 'Programming' })
+      // );
+      // console.log(visualizeEntries({}));
+      output_two.innerHTML += visualizeEntries({
+        id: 1,
+        name: 'Learn JavaScript',
+        year: 2021,
+      });
+      output_two.innerHTML += visualizeEntries({
+        name: 'Learn JavaScript',
+        category: 'Programming',
+      });
+      output_two.innerHTML += visualizeEntries({});
+
+      // callin
+    </script>
+  </body>
+</html>

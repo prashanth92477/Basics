@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Shorthand</title>
+    <style>
+      .container {
+        width: 600px;
+        border: 2px solid blue;
+        border-radius: 5px;
+        margin: 20px auto;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Get user</h1>
+      <p>
+        Complete the function getUser such that it returns an object containing
+        the id and name using the object shorthand notation.
+      </p>
+      <p>
+        It is every import below because you can directly return arguemnt as
+        Object using {}
+      </p>
+      <p id="shorthand"></p>
+    </div>
+
+    <div class="container --two">
+      <h1>Concatenate objects</h1>
+      <p>
+        Complete the function mergeOptions such that it returns an object which
+        merges the options with the defaultOptions. If a key is defined in the
+        options, it should override the option provided in the defaultOptions.
+      </p>
+      <p>
+        Note: Here we are trying to concate Objects with using ...spread
+        Operator WE NOTE HERE IS, IF 2 OBJECTS HAVING SAME KEY THEN OBJECT WHICH
+        DECLARE WILL OVERRID THE SAME KEY VALUE. CHECK THE EXAMPLE BELOW.
+      </p>
+      <p id="spread"></p>
+    </div>
+
+    <div class="container --three">
+      <h1>Destructure from objects I</h1>
+      <p>
+        Complete the function getLatLng such that it destructures the
+        userLocation object into 2 variables: lat and lng.
+      </p>
+      <p>
+        After destructuring successfully, the function will automatically return
+        a string that describes the location.
+      </p>
+      <p id="destructing"></p>
+    </div>
+
+    <div class="container --four">
+      <h1>Destructure from objects II</h1>
+      <p>
+        Complete the function getLatLngElevation such that it destructures the
+        userLocation object into 3 variables: lat, lng & elevation.
+      </p>
+      <p>The elevation should default to 0.</p>
+      <p>
+        After destructuring successfully, the function will automatically return
+        a string that describes the location.
+      </p>
+      <p>
+        <strong>Note: Here we are Adding Default value to Object {}</strong>
+      </p>
+      <p id="defaults"></p>
+    </div>
+    <script>
+      // Sample usage - do not modify
+      const options = {
+        tabSize: 4,
+      };
+      const defaultOptions = {
+        indentation: 'tab',
+        tabSize: 2,
+        language: 'javascript',
+      };
+      const userLocation = {
+        lat: 24.235235,
+        lng: 2.5734,
+      };
+
+      const shorthand_id = document.querySelector('#shorthand');
+      const destructing = document.querySelector('#destructing');
+      const shorthand = (id, name) => {
+        return { id, name };
+      };
+      const mergeOptions = (options, defaultOptions) => {
+        return { ...defaultOptions, ...options };
+      };
+      const getLang = (userLocation) => {
+        const { lat, lng } = userLocation;
+        return `The latitude is ${lat} and the longitude is ${lng}`;
+      };
+      /*
+       * @param {object} userLocation
+       * @param {number} userLocation.lat
+       * @param {number} userLocation.lng
+       * @param {number} [userLocation.elevation]
+       */
+      const getLatLngElevation = (userLocation) => {
+        const { lat, lng, elevation = 0 } = userLocation;
+        return `The latitude is ${lat}, the longitude is ${lng} and the elevation is ${elevation} meters`;
+      };
+
+      // console.log(shorthand(2, 'Sam'));
+      // console.log(shorthand(5, 'Alex'));
+      shorthand_id.textContent = JSON.stringify(shorthand(2, 'Sam'));
+      spread.textContent = JSON.stringify(
+        mergeOptions(defaultOptions, options)
+      ); // {indentation: "tab", tabSize: 4, language: "javascript"}
+      destructing.textContent = JSON.stringify(getLang(userLocation));
+      // console.log(getLang(userLocation));
+
+      defaults.textContent = JSON.stringify(getLatLngElevation(userLocation));
+    </script>
+  </body>
+</html>

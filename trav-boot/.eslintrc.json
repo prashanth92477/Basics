@@ -1,0 +1,15 @@
+// {
+//   "rules": {
+//     "semi": "off",
+//     "eqeqeq": "warn"
+//   }
+// }
+// {
+//   "parserOptions": {
+//     "ecmaVersion": "latest"
+//   },
+
+//   "env": {
+//     "es6": true
+//   }
+// }

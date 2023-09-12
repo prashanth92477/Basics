@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 600px;
+        border: 2px solid blue;
+        border-radius: 5px;
+        margin: 20px auto;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Refactoring if conditions</h1>
+      <p>
+        The host is welcoming the user into their apartment. Refactor the
+        getStatus function and avoid using if conditions.
+      </p>
+      <p>
+        <strong>Note:</strong>
+        to be consistent with the rest of the course, we're using the canceled
+        (with one L instead of two). Both words are correct, one of them is
+        American English and the other one is British English. So, make sure you
+        write canceled rather than cancelled to pass the tests.
+      </p>
+      <!-- <p><strong id="output"></strong></p> -->
+      <ul id="list"></ul>
+    </div>
+    <script>
+      const ul = document.querySelector('#list');
+      /**
+       * @param {string} host
+       * @param {string} user
+       * @param {Object} booking
+       * @param {string} booking[].status
+       */
+      const getStatus = (host, user, booking) => {
+        const getStatus = {
+          pending: `Hey ${user}, we're awaiting confirmation from ${host}`,
+          confirmed: `Hey ${user}, ${host} is excited to be hosting you.`,
+          canceled: `Unfortunately ${user}, ${host} has canceled your booking request.`,
+          done: `${host} hopes you had a great stay.`,
+        };
+
+        return getStatus[booking.status] ?? 'Unknown booking status.';
+        //console.log(booking)
+        //console.log(getStatus[booking.status])
+        // if (booking.status === "pending") {
+        //     return `Hey ${user}, we're awaiting confirmation from ${host}.`;
+        // } else if (booking.status === "confirmed") {
+        //     return `Hey ${user}, ${host} is excited to be hosting you.`;
+        // } else if (booking.status === "canceled") {
+        //     return `Unfortunately ${user}, ${host} has canceled your booking request.`;
+        // } else if (booking.status === "done") {
+        //     return `${host} hopes you had a great stay.`;
+        // } else {
+        //     return "Unknown booking status."
+        // }
+      };
+
+      // Sample usage - do not modify
+
+      // Here in the below scenarion we are passing object with poperty values so that
+      // property key value.
+
+      const booking1 = {
+        status: 'pending',
+      };
+      // console.log(getStatus('Sam', 'Alex', booking1)); // "Hey Alex, we're awaiting confirmation from Sam."
+      const booking2 = {
+        status: 'confirmed',
+      };
+      // console.log(getStatus('Charlie', 'Blake', booking2)); // "Hey Blake, Charlie is excited to be hosting you."
+      const li = document.createElement('li');
+      const li_1 = document.createElement('li');
+      li.textContent = getStatus('Sam', 'Alex', booking1);
+      li_1.textContent = getStatus('Charlie', 'Blake', booking2);
+      ul.appendChild(li);
+      ul.appendChild(li_1);
+    </script>
+  </body>
+</html>

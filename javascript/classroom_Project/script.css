@@ -1,0 +1,61 @@
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+input {
+  padding: 11px 0;
+  width: 200px;
+  /* border-radius: 5px; */
+  outline: none;
+  border-style: none;
+  background-color: white;
+  /* border-style: none; */
+}
+::placeholder {
+  padding-left: 10px;
+  font-size: 16px;
+}
+input:not(.btn):focus {
+  outline: none;
+  border-left: 7px solid lightcoral;
+}
+.container {
+  width: 900px;
+  border: 2px solid blue;
+  margin: 20px auto;
+  padding: 20px 20px;
+}
+table {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 2px solid red;
+}
+tr th {
+  padding: 8px;
+  background-color: lightseagreen;
+}
+tr td {
+  padding: 8px;
+  background-color: rgb(239, 226, 173);
+  text-align: center;
+}
+
+.btn-primary {
+  padding: 10px 30px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  background-color: lightcoral;
+  border-style: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.user-input {
+  background-color: rgb(230, 227, 227);
+  margin-bottom: 12px;
+}
+label {
+  font-size: 18px;
+}

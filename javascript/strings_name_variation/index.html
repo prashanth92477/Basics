@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scripts</title>
+    <link rel="stylesheet" href="./script.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="nav-brand">Name Variations</h1>
+    </nav>
+    <main class="container">
+      <div class="input-div">
+        <label for="name-varation"">Enter Your Name</label>
+        <input type="text" placeholder="Your name" id="name-varation"/>
+      </div>
+      <table>
+        <thead>
+          <th>
+            Variation
+          </th>
+          <th>
+            Result
+          </th>
+        </thead>
+        <tbody class="table" id="name_id">
+          <tr>
+            <td>Number of Character</td>
+            <td id= "answer1"></td>
+          </tr>
+          <tr>
+            <td>First Character</td>
+            <td id="answer2"></td>
+          </tr>
+          <tr>
+            <td>Last Character</td>
+            <td id="answer3"></td>
+          </tr>
+          <tr>
+            <td>Lower Case</td>
+            <td id="answer4"></td>
+          </tr>
+          <tr>
+            <td>Upper Case</td>
+            <td id="answer5"></td>
+          </tr>
+          <tr>
+            <td>Capatlize</td>
+            <td id="answer6"></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./variation.js"></script>
+  </body>
+</html>
